@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NoteManager</class>
+ <widget class="QMainWindow" name="NoteManager">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>928</width>
+    <height>659</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Note Manager</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0.179, y1:0.227273, x2:1, y2:1, stop:0.149254 rgba(139, 175, 255, 255), stop:0.59204 rgba(163, 125, 215, 255));
+font: 8pt &quot;Constantia&quot;;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0" rowspan="2">
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <widget class="QLabel" name="label_title">
+         <property name="font">
+          <font>
+           <family>Constantia</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;
+font-weight: bold;
+font-size: 10pt;
+background-color: none;
+border: none;</string>
+         </property>
+         <property name="text">
+          <string>Title:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="lineEdit_title">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 30);
+border: 1px solid rgba(255,255,255,40);
+border-radius: 7px;
+</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_content">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;
+font-weight: bold;
+font-size: 10pt;
+background-color: none;
+border: none;</string>
+         </property>
+         <property name="text">
+          <string>Content:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="textEdit_content">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 30);
+border: 1px solid rgba(255,255,255,40);
+border-radius: 7px;
+</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_addNote">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+     background-color:rgba(255,255,255,30);
+     border: 1px solid rgba(255,255,255,40);
+     border-radius:7px;
+width: 230;
+height: 50;
+}
+QPushButton:hover{
+background-color:rgba(255,255,255,30);
+}
+QPushButton:pressed{
+background-color:rgba(255,255,255,70);
+}</string>
+         </property>
+         <property name="text">
+          <string>Add Note</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1" rowspan="2">
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QLabel" name="label_noteLists">
+         <property name="font">
+          <font>
+           <family>Constantia</family>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;
+font-weight: bold;
+font-size: 10pt;
+background-color: none;
+border: none;</string>
+         </property>
+         <property name="text">
+          <string>Notes list</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListWidget" name="listWidget_noteLists">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 30); 
+border: 1px solid rgba(255,255,255,40);
+border-radius: 7px;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_deleteNote">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+     background-color:rgba(255,255,255,30);
+     border: 1px solid rgba(255,255,255,40);
+     border-radius:7px;
+width: 230;
+height: 50;
+}
+QPushButton:hover{
+background-color:rgba(255,255,255,30);
+}
+QPushButton:pressed{
+background-color:rgba(255,255,255,70);
+}</string>
+         </property>
+         <property name="text">
+          <string>Delete Note</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="2">
+     <widget class="QFrame" name="frame">
+      <property name="styleSheet">
+       <string notr="true">background-color: transparent;
+</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLineEdit" name="lineEdit_search">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 30);
+border: 1px solid rgba(255,255,255,40);
+border-radius: 7px;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_searchTitle">
+         <property name="minimumSize">
+          <size>
+           <width>230</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Constantia</family>
+           <pointsize>8</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+     background-color:rgba(255,255,255,30);
+     border: 1px solid rgba(255,255,255,40);
+     border-radius:7px;
+width: 230;
+height: 50;
+}
+QPushButton:hover{
+background-color:rgba(255,255,255,30);
+}
+QPushButton:pressed{
+background-color:rgba(255,255,255,70);
+}</string>
+         </property>
+         <property name="text">
+          <string>Search by Title</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/icons/icons/edit_white_24dp.svg</normaloff>:/icons/icons/edit_white_24dp.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_searchContent">
+         <property name="minimumSize">
+          <size>
+           <width>230</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Constantia</family>
+           <pointsize>8</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+     background-color:rgba(255,255,255,30);
+     border: 1px solid rgba(255,255,255,40);
+     border-radius:7px;
+width: 230;
+height: 50;
+}
+QPushButton:hover{
+background-color:rgba(255,255,255,30);
+}
+QPushButton:pressed{
+background-color:rgba(255,255,255,70);
+}</string>
+         </property>
+         <property name="text">
+          <string>Search by Content</string>
+         </property>
+         <property name="icon">
+          <iconset>
+           <normaloff>:/icons/icons/edit_white_24dp.svg</normaloff>:/icons/icons/edit_white_24dp.svg</iconset>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>24</width>
+           <height>24</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton_all_note">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+	color: rgb(255, 255, 255);
+     background-color:rgba(255,255,255,30);
+     border: 1px solid rgba(255,255,255,40);
+     border-radius:7px;
+width: 230;
+height: 50;
+}
+QPushButton:hover{
+background-color:rgba(255,255,255,30);
+}
+QPushButton:pressed{
+background-color:rgba(255,255,255,70);
+}</string>
+         </property>
+         <property name="text">
+          <string>All Notes</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="1" column="2">
+     <widget class="QLabel" name="label_note">
+      <property name="styleSheet">
+       <string notr="true">color: white;
+font-size: 14pt;
+background-color: none;
+border: none;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
