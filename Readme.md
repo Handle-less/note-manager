@@ -29,7 +29,7 @@ allows you to add, view, search, and delete notes. You can store notes with titl
     pip install PyQt6
     ```
 
-3. Go to the NoteApp directory and run the application:
+3. Go to the NoteManager directory and run the application:
 
     ```bash
     python main.py
